@@ -44,11 +44,34 @@ class Podracer:
 class AnakinsPod(Podracer):
     def __init__(self, max_speed, condition, price,) -> None:
         super().__init__(max_speed, condition, price)
-    def boost(max_speed):
-        pass
+    def boost(self):
+        self.max_speed *= 2
 
 class SebulbasPod(Podracer):
     def __init__(self, max_speed, condition, price) -> None:
         super().__init__(max_speed, condition, price)
     def flame_jet(condition):
         super().condition = 'trashed'
+
+#Q How does this solution demonstrate the four pillars of OOP? 
+# (It may not demonstrate all of them, describe only those that apply)
+#A -Encapsulation: The methods can be accessed however not the attributes is some cases.
+# -Abstraction: N/A
+# -Inheritance: The other pod racers use the default constructor from podracer class using recycled code.
+# -Polymorphism: The parent shares behaviors of its class to its children.
+#Q Would it have been easier to implement a solution to this problem using a different coding style? Why or why not?
+#A No, I think this fits appropriately. It makes things easier when configuring multiple "Podracers". It recycles code that would otherwise be repetitive.
+#Q How in particular did Object Oriented Programming assist in the solving of this problem?
+#A Most importantly the inheritance and polymorphism pillars.
+
+
+#REFLECTION
+#Q Is one of these coding paradigms "better" than the other? Why or why not?
+#A No, They both serve a purpose that is beneficial in its own way from small scale to large scale. 
+#Q Given the opportunity to work predominantly using either of these coding paradigms, which seems more appealing? Why?
+#A I would lean towards the functional prompt. It allows clear dry code with little errors and easy debugging.
+#Q Now being more familiar with these coding paradigms, what tasks/features/pieces of logic would be best handled using functional programming? Object Oriented Programming?
+#A Functional programming is useful for quick operations or task handling. I believe OOP is better for larger scale manipulation and structural coding.
+#Q Personally, which of these styles takes more work to understand? What should be done in order to deepen understanding related to this paradigm?
+#A It might be because I'm new but I would bet using functional coding takes more work to understand to make clear effect coding that is pure and 
+# elegant.
